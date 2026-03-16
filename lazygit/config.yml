@@ -1,0 +1,11 @@
+os:
+  edit: '/opt/homebrew/bin/hx {{filename}}'
+  editAtLine: '/opt/homebrew/bin/hx {{filename}}:{{line}}'
+  editPreset: 'helix'
+
+promptToReturnFromSubprocess: false
+
+refresher:
+  # File/submodule refresh interval in seconds.
+  # Auto-refresh can be disabled via option 'git.autoRefresh'.
+  refreshInterval: 1

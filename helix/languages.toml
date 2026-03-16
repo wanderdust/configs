@@ -1,0 +1,10 @@
+[[language]]
+name = "python"
+formatter = { command = "black", args = ["--line-length", "120", "--quiet", "-"] }
+auto-format = true
+
+
+[[language]]
+name = "hcl"
+formatter = { command = "terraform" , args = ["fmt"] }
+auto-format = true
