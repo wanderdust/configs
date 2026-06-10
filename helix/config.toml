@@ -4,6 +4,14 @@ mouse = false
 clipboard-provider = "pasteboard"
 trim-trailing-whitespace = true
 trim-final-newlines = true
+cursorline = true
+scrolloff = 8
+popup-border = "all"
+true-color = true
+undercurl = true
+completion-timeout = 100
+completion-replace = true
+end-of-line-diagnostics = "warning"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,3 +23,16 @@ hidden = false
 
 [editor.soft-wrap]
 enable = true
+
+[editor.lsp]
+display-inlay-hints = true
+display-progress-messages = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+
+[editor.indent-guides]
+render = true
+character = "│"
+skip-levels = 1
