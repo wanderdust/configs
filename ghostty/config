@@ -53,3 +53,4 @@
 keybind = global:ctrl+backquote=toggle_quick_terminal
 quick-terminal-size = 100%
 quick-terminal-autohide = false
+quick-terminal-screen = macos-menu-bar
