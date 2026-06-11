@@ -1,6 +1,7 @@
 [editor]
 line-number = "relative"
-mouse = false
+mouse = true
+rulers = [120]
 clipboard-provider = "pasteboard"
 trim-trailing-whitespace = true
 trim-final-newlines = true
@@ -8,10 +9,38 @@ cursorline = true
 scrolloff = 8
 popup-border = "all"
 true-color = true
+color-modes = true
 undercurl = true
 completion-timeout = 100
 completion-replace = true
-end-of-line-diagnostics = "warning"
+end-of-line-diagnostics = "hint"
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "version-control",
+  "spacer",
+  "separator",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+
+]
+center = []
+right = [
+  "diagnostics",
+  "workspace-diagnostics",
+  "position",
+  "total-line-numbers",
+  "position-percentage",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+  "register",
+  "selections",
+]
+separator = "│"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -34,5 +63,20 @@ other-lines = "error"
 
 [editor.indent-guides]
 render = true
-character = "│"
-skip-levels = 1
+character = "╎"
+skip-levels = 0
+
+[editor.auto-save]
+focus-lost  = true
+after-delay.enable = true
+after-delay.timeout = 300000
+
+
+[keys.normal]
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-file',
+  ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
